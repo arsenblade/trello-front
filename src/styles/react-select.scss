@@ -1,0 +1,342 @@
+@import './variables.scss';
+
+.select-container {
+  width: 185px;
+	z-index: 11;
+}
+
+.custom-select-black-space {
+	&__control {
+		box-shadow: none !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    width: 185px !important;
+    border: 2px solid transparent !important; 
+    background-color: transparent !important;
+    outline: none !important;
+
+    &:hover {
+      border: 2px solid rgba(255, 255, 255, 0.25) !important; 
+      background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+		&--menu-is-open {
+      color: white !important;
+		}
+	}
+
+  &__single-value {
+    font-size: 20px;
+    line-height: 26px;
+    color: white !important;
+  }
+
+	&__placeholder {
+		color: rgba($color: white, $alpha: .8) !important;
+	}
+
+	&__value-container {
+		padding: 0 10px !important;
+    width: 100px !important;
+		cursor: pointer !important;
+
+    >div {
+      width: max-content !important;
+    }
+	}
+
+	&__input-container {
+    color: white !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	&__indicator {
+    color: white !important;
+
+		&:hover {
+      color: white !important;
+		}
+	}
+
+	&__multi-value {
+		background-color: rgba(white, 0.6) !important;
+		border-radius: 0.5rem !important;
+    width: max-content;
+		padding: 4px !important;
+		cursor: pointer;
+	}
+
+	&__multi-value__label {
+		font-size: 80% !important;
+    color: white !important;
+	}
+
+	&__multi-value__remove {
+    color: white !important;
+		
+
+		&:hover {
+			background-color: transparent !important;
+      color: white !important;
+		}
+	}
+
+	&__menu {
+    background-color: $gray700 !important;
+    color: white !important;
+    font-weight: 600;
+	}
+
+	&__menu-list {
+		max-height: 200px !important;
+		overflow-y: auto !important;
+
+		&::-webkit-scrollbar  {
+			background-color: $gray500 !important;
+			width: 6px !important;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: $gray900 !important;
+			width: 8px !important;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+
+
+	&__option {
+		cursor: pointer !important;
+	}
+
+  &__option--is-selected {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    color: black !important;
+	}
+
+  &__option--is-focused {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+      outline: none;
+      border: none;
+      transition-property: all;
+      transition-timing-function: ease-in-out;
+      transition-duration: 200ms;
+			border-color: black !important;
+			box-shadow: none !important;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: black !important;
+		}
+
+		.form-control__indicators {
+      cursor: pointer;
+		}
+	}
+
+	&__menu {
+    @keyframes scaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .animate-scaleIn {
+      animation: scaleIn .35s ease-in-out;
+    }
+  }
+
+}
+
+.custom-select-classic {
+	&__control {
+		box-shadow: none !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    width: 185px !important;
+    border: 2px solid transparent !important; 
+    background-color: transparent !important;
+    outline: none !important;
+
+    &:hover {
+      background-color: rgba($color: white, $alpha: .2) !important;
+    }
+
+		&--menu-is-open {
+      color: black !important;
+		}
+	}
+
+  &__single-value {
+    font-size: 20px;
+    line-height: 26px;
+    color: white !important;
+  }
+
+	&__value-container {
+		padding: 0 10px !important;
+    width: 100px !important;
+		cursor: pointer !important;
+
+    >div {
+      width: max-content !important;
+    }
+	}
+
+	&__input-container {
+    color: black !important;
+	}
+
+	&__indicator-separator {
+		display: none !important;
+	}
+
+	&__indicators {
+		cursor: pointer !important;
+	}
+
+	&__indicator {
+    color: white !important;
+
+		&:hover {
+      color: white !important;
+		}
+	}
+
+	&__placeholder {
+		color: rgba($color: white, $alpha: .8) !important;
+	}
+
+	&__multi-value {
+		background-color: rgba(white, 0.6) !important;
+		border-radius: 0.5rem !important;
+    width: max-content;
+		padding: 4px !important;
+		cursor: pointer;
+	}
+
+	&__multi-value__label {
+		font-size: 80% !important;
+    color: white !important;
+	}
+
+	&__multi-value__remove {
+    color: white !important;
+		
+
+		&:hover {
+			background-color: transparent !important;
+      color: white !important;
+		}
+	}
+
+	&__menu {
+    background-color: #1f5ba9 !important;
+    color: white !important;
+    font-weight: 600;
+	}
+
+	&__menu-list {
+		max-height: 200px !important;
+		overflow-y: auto !important;
+
+		&::-webkit-scrollbar  {
+			background-color: white !important;
+			width: 6px !important;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+		
+		&::-webkit-scrollbar-thumb {
+			background-color: $blue !important;
+			width: 8px !important;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+		}
+	}
+
+	&__option {
+		cursor: pointer !important;
+	}
+
+  &__option--is-selected {
+    background-color: $blue !important;
+    color: white !important;
+	}
+
+  &__option--is-focused {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+	}
+
+	&-container {
+		> div {
+			outline: none !important;
+			box-shadow: none !important;
+		}
+
+		.form-control__control {
+      outline: none;
+      border: none;
+      transition-property: all;
+      transition-timing-function: ease-in-out;
+      transition-duration: 200ms;
+			border-color: black !important;
+			box-shadow: none !important;
+		}
+
+		&:hover,
+		&--menu-is-open {
+			border-color: black !important;
+		}
+
+		.form-control__indicators {
+      cursor: pointer;
+		}
+	}
+
+	&__menu {
+    @keyframes scaleIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      50% {
+        opacity: 0.3;
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .animate-scaleIn {
+      animation: scaleIn .35s ease-in-out;
+    }
+  }
+
+}

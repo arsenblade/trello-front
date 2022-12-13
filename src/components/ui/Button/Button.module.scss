@@ -1,0 +1,17 @@
+.btn {
+  border-radius: 6px;
+  padding: 4px 12px;
+  color: white;
+  outline: none;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-size: 20px;
+  line-height: 26px;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}

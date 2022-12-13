@@ -1,0 +1,162 @@
+@import '../../../styles/variables.scss';
+
+
+.classicTheme {
+  >h1 {
+    color: rgba($color: $blue, $alpha: .9)
+  }
+
+  .boardsList {
+    &::-webkit-scrollbar  {
+      background-color: rgba($color: $blue-light, $alpha: .2);
+      width: 16px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $blue-light;
+      width: 8px;
+    }
+  }
+
+  .boardAdd {
+    border: 2px solid rgba($color: $blue-light, $alpha: .9);
+    background-color: rgba($color: $blue-light, $alpha: .1);
+
+    &:hover {
+      background-color: rgba($color: $blue-light, $alpha: .3);
+      transform: scale(1.01);
+    }
+
+    .titleBoardAdd {
+      color: white;
+    }
+  }
+
+  .boardItem {
+    background-color: rgba($color: $blue-light, $alpha: .6);
+    color: white;
+
+    &:hover {
+      background-color: rgba($color: $blue-light, $alpha: .8);
+    }
+
+    .closeBtn {
+      color: white;
+    }
+  }
+  
+}
+
+.blackTheme {
+  >h1 {
+    color: rgba($color: white, $alpha: .9)
+  }
+
+  .boardsList {
+    &::-webkit-scrollbar  {
+      background-color: $gray300;
+      width: 16px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray600;
+      width: 8px;
+    }
+  }
+
+  .boardAdd {
+    border: 2px solid rgba($color: white, $alpha: .9);
+    background-color: rgba($color: white, $alpha: .1);
+
+    &:hover {
+      background-color: rgba($color: white, $alpha: .3);
+      transform: scale(1.01);
+    }
+
+    
+    .titleBoardAdd {
+      color: white;
+    }
+  }
+
+  .boardItem {
+    background-color: rgba($color: $gray300, $alpha: .9);
+
+    &:hover {
+      background-color: $gray300;
+    }
+  }
+}
+
+.boardContainer {
+  padding: 20px;
+
+  >h1 {
+    margin-left: 10px;
+  }
+
+  .boardsList {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 550px;
+    
+    .boardAdd {
+      position: relative;
+      width: 300px;
+      min-height: 200px;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+
+      .titleBoardAdd {
+        position: absolute;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 700;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 240px
+      }
+    }
+
+    .boardItem {
+      display: flex;
+      align-items: flex-start;
+      width: 300px;
+      min-height: 200px;
+      border-radius: 10px;
+      padding: 15px;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.01);
+      }
+
+      >h2 {
+        width: 240px;
+        font-size: 30px;
+        margin: 0;
+        word-break: break-all;
+      }
+
+      .closeBtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 24px;
+        padding: 3px 6px;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}

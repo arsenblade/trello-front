@@ -1,0 +1,78 @@
+@import '../../../styles/variables.scss';
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  height: 54px;
+
+  .selectLabel {
+    color: white;
+    font-weight: 600;
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+
+  .backBtn {
+    font-size: 16px;
+  }
+
+  .addUserOnBoard {
+    margin-left: 20px;
+  }
+
+  .containerSelectTheme {
+    margin-right: 20px;
+  }
+
+  .btnLogout {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .containerImgWorker {
+    position: relative;
+    cursor: pointer;
+
+    .userName{
+      padding: 4px;
+      position: absolute;
+      display: none;
+      top: -30%;
+      right: 80%;
+      background-color: white;
+      border: 1px solid black;
+    }
+
+    .imgWorker {
+      display: block;
+    }
+
+    &:hover {
+      .userName {
+        display: block;
+      }
+    }
+  }
+}
+
+.blackTheme {
+  background-color: rgba($color: $gray950, $alpha: 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  .selectLabel {
+    color: white;
+  }
+}
+
+.classicTheme {
+  background-color: $blue;
+
+  .selectLabel {
+    color: white;
+  }
+}

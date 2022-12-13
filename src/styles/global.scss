@@ -1,0 +1,87 @@
+@import './variables.scss';
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  height: 100vh;
+
+  >div {
+    height: 100vh;
+  }
+}
+
+.app {
+  height: max-content;
+  min-height: 100vh;
+}
+
+.spaceTheme {
+  background: url('../assets/img/space-back.jpg') no-repeat;
+  background-color: $gray800;
+}
+
+.blackTheme {
+  background-color: $gray800;
+}
+
+.classicTheme {
+  background-color: #e5eaf1;
+}
+
+.error404 {
+  color: rgba($color: white, $alpha: 0.8);
+  font-size: 50px;
+  line-height: 56px;
+  font-weight: 600;
+  margin-left: 40px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

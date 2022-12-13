@@ -1,0 +1,138 @@
+@import '../../../../../styles/variables.scss';
+
+.classicTheme {
+  &::-webkit-scrollbar  {
+    background-color: white;
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    width: 8px;
+  }
+}
+
+.blackTheme {
+  &::-webkit-scrollbar  {
+    background-color: $gray500;
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray700;
+    width: 8px;
+  }
+}
+
+.taskList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-bottom: 10px;
+  overflow-x: none;
+  overflow-y: auto;
+  max-height: 500px;
+  padding-right: 6px;
+
+  .taskItem {
+    background-color: rgba($color: white, $alpha: .9);
+    border-radius: 4px;
+    box-shadow: 0 1px 0 #091e4240;
+    padding: 8px;
+
+    .deadLineText {
+      margin-bottom: 6px;
+    }
+
+
+    .containerWorkerAndBtn {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+
+
+      .containerImgWorker {
+        position: relative;
+        margin-left: auto;
+        cursor: pointer;
+
+        .userName{
+          padding: 4px;
+          position: absolute;
+          display: none;
+          top: -70%;
+          right: 80%;
+          background-color: white;
+          border: 1px solid black;
+        }
+
+        .imgWorker {
+          display: block;
+        }
+
+        &:hover {
+          .userName {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .btnCompleted {
+      border: 1px solid rgb(18, 192, 18);
+      border-radius: 4px;
+      background-color: rgba($color: rgb(18, 192, 18), $alpha: .2);
+      outline: none;
+      width: 50%;
+      min-height: 30px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgba($color: rgb(18, 192, 18), $alpha: .5);
+      }
+    } 
+
+    .headerTask {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      column-gap: 10px;
+
+      .titleTask {
+        margin: 0;
+        color: $gray800;
+        width: 100%;
+      }
+
+      .closeBtn {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        font-size: 20px;
+        padding: 3px 6px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-left: auto;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+
+    .description {
+      color: $gray700;
+      margin: 0;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .completed {
+    background-color: rgba($color: rgb(91, 209, 91), $alpha: .8);
+  }
+
+  .overdue {
+    background-color: rgba($color: rgb(232, 67, 67), $alpha: .8);
+  }
+}

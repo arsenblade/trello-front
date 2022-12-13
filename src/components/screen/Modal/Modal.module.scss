@@ -1,0 +1,156 @@
+@import '../../../styles/variables.scss';
+
+.classicTheme {
+  .modal {
+    background-color: $blue;
+
+    .descriptionField {
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .title {
+      color: white;
+    }
+  }
+}
+
+.blackTheme {
+
+  .modal {
+    background-color: $gray950;
+
+    .descriptionField {
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    .title {
+      color: white;
+    }
+  }
+}
+
+.modalContainer {
+  position: fixed;
+  background-color: rgba($color: gray, $alpha: 0.4);
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 11;
+
+  .modal {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    left: 50%;
+    min-width: 526px;
+    transform: translate(-50%, 0%);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 0 2px rgb(58 66 75 / 10%), 0 2px 4px rgb(58 66 75 / 20%);
+
+    button {
+      margin-bottom: 10px;
+    }
+
+    .containerBtnDeadLine {
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+    }
+
+    .containerAddUserSelect {
+      display: flex;
+      column-gap: 10px;
+      align-items: center;
+      margin-left: 12px;
+      margin-bottom: 10px;
+
+      >span {
+        color: white;
+        font-size: 20px;
+        margin-right: 12px;
+      }
+    }
+
+    .textDeadLine {
+      color: white;
+      text-align: start;
+      margin-left: 12px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .calendar {
+      position: absolute;
+      bottom: 60px;
+      left: 100%;
+    }
+
+    .nameField {
+      margin-bottom: 10px;
+    }
+
+    .descriptionField {
+      border-radius: 6px;
+      padding: 6px 12px;
+      outline: none;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      min-height: 200px;
+      margin-bottom: 10px;
+      resize: none;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 10px;
+
+      .title {
+        margin: 0;
+        font-size: 28px;
+      }
+
+      .btnClose {
+        border: none;
+        outline: none;
+        margin-left: auto;
+        background-color: transparent;
+        font-size: 24px;
+        padding: 3px 6px;
+        cursor: pointer;
+        border-radius: 4px;
+        color: white;
+
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+
+    .btnCreate {
+      margin-left: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.close {
+  display: none;
+}

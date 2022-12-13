@@ -1,0 +1,59 @@
+@import '../../../styles/variables.scss';
+
+.authForm {
+  display: flex;
+  opacity: 0.9;
+  flex-direction: column;
+  color: white;
+  width: 400px;
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border-radius: 10px;
+
+  >h1 {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  input {
+    margin-bottom: 10px;
+    &::placeholder {
+      color: rgba($color: white, $alpha: 0.8)
+    }
+  }
+
+  .btnContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    >button {
+      width: 100%;
+      max-width: 250px;
+      margin-left: auto;
+    }
+
+    >a {
+      margin: 0 auto;
+      &:hover {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
+.blackTheme {
+  background-color: $gray950;
+}
+
+.classicTheme {
+  opacity: 1;
+  background-color: rgba($color: $blue, $alpha: .8);
+  box-shadow: 0 0 2px rgb(58 66 75 / 10%), 0 2px 4px rgb(58 66 75 / 20%);
+
+  input {
+    color: white;
+  }
+}
